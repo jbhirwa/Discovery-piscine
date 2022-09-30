@@ -1,0 +1,17 @@
+.personal-info
+{
+    position: absolute;
+}
+.background-info
+{
+    position: relative;
+}
+
+.contact-block
+{
+
+    position: relative;
+    background-color: red;
+    width: 300px;
+    height: 100%;
+}

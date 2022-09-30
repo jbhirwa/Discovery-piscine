@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+  <meta charset="utf-8">
+  <title>calc</title>
+  <!-- <link rel="stylesheet" href="calc.css"> -->
+</head>
+ 
+<body>
+ 
+<table class="calculator" >
+  <tr>
+    <td colspan="1"> input one<input type="text" id="input-one"  /></td>
+        <td> 
+          <label for="operators">operators:</label>
+          <select name="operators" id="operators">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="/">/</option>
+              <option value="*">*</option>
+              <option value="%">%</option>
+          </select> 
+        </td>
+      <td colspan="1"> input two<input type="text" id="input-two"  /> </td>
+    <td> <input type="button" value="try me!" onclick="calculate(), clearScreen()" id="btn" /> </td>
+  </tr>
+</table>
+ 
+<script type="text/javascript" src="calc.js"></script>
+ 
+</body>
+ <script>
+function clearScreen() {
+    document.getElementById("input-one").value = "";
+    document.getElementById("input-two").value = "";
+}
+function calculate() {
+    var a = document.getElementById("input-one").value;
+    var b = document.getElementById("input-two").value;
+    var op = document.getElementById("operators").value;
+    var answer;
+    if (op == "+")
+      answer = (parseInt(a, 10) + parseInt(b, 10));
+    if (op == "-")
+      answer = (parseInt(a, 10) - parseInt(b, 10));
+    if (op == "*")
+      answer = (parseInt(a, 10) * parseInt(b, 10));
+    if (op == "/")
+    {
+      if (a == 0)
+        alert("It’s over 9000!");
+      answer = (parseInt(a, 10) / parseInt(b, 10));
+    }
+    if (op == "%")
+    {
+      if (a > b)
+        answer = (parseInt(b, 10) / parseInt(a, 10));
+      else
+        answer = (parseInt(a, 10) / parseInt(b, 10));
+    }
+    console.log(answer);
+    if (answer < 0)
+      alert("Error :(");
+    else
+      alert(answer);
+    setInterval(function() { 
+   alert("Please, use me...");
+}, 30000);
+}
+ </script>
+</html>

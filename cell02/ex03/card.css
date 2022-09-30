@@ -1,0 +1,21 @@
+.whole-table{
+    width:210px; 
+    border-spacing: 3px;
+    box-shadow: 3px 30px 30px 3px #888888;
+    background-color: white; 
+}
+.user-title{
+    height:30px; 
+    color: black;
+    background-color: white; 
+    text-align: center;
+}
+
+.profile-picture{
+    height: 100px; 
+    background-image: url(images.jpg);
+}
+.btn{
+    width: 100%;
+    height: 30px;
+}
